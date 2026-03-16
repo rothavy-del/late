@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EMP-ID Entry</title>
+  <script>
+    window.onload = function() {
+      // Ask for EMP-ID immediately when page opens
+      let emp = prompt("Please enter your EMP-ID:");
+
+      if(emp && emp.trim() !== "") {
+        // Redirect to Telegram bot with EMP-ID
+        window.location.href = "https://t.me/MaximaLateEarlybot?start=" + encodeURIComponent(emp);
+      } else {
+        alert("EMP-ID is required!");
+      }
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>
